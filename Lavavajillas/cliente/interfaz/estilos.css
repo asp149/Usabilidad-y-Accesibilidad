@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* Estilos para el cuerpo de la página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+  width: 10.67in;
+  height: 6in;
+  min-width: 10.67in;
+  min-height: 6in;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #28272c;
+}
+
+/* Estilos para el contenedor de información */
+.contenedor-informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #c1c7db;
+  user-select: none;
+}
+.hora{
+  margin-bottom: 50px;
+}
+
+/* Estilos para el icono dentro del botón cuando se hace hover */
+.boton:hover i {
+  color: #c1c7db;
+}
+
+/* Estilos para el icono dentro del botón */
+.boton i {
+  font-size: 3rem;
+  color: #28272c;
+}
+
+/* Estilos para el contenedor de botones */
+.contenedor-botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 80px; /* Aumentamos el espacio entre botones */
+  grid-template-areas:
+    "encendido ciclo"
+    "ajustes modos";
+  justify-content: flex-start;
+}
+
+/* Estilos para los botones */
+.boton {
+  margin-left: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* Reducimos el ancho de los botones */
+  height: 120px;
+  border-radius: 50%;
+  background-color: #c1c7db;
+  color: white;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para el botón cuando se hace hover */
+.boton:hover {
+  transform: scale(1.1);
+  background-color: #28272c;
+  color: #c1c7db;
+}
+
+/* Estilos para la primera fila de botones */
+.fila-1 {
+  display: flex;
+  justify-content: space-between;
+  grid-area: encendido;
+}
+
+/* Estilos para la segunda fila de botones */
+.fila-2 {
+  display: flex;
+  justify-content: space-between;
+  grid-area: ajustes;
+}
+
+/* Estilos de la página Modos*/
+
+/* Estilo para la lista de modos */
+.lista-modos {
+  height: 60%;
+  width: 90%;
+  margin: 1rem auto;
+  overflow-y: auto;
+}
+
+/* Estilo para cada elemento de la lista */
+.lista-modos div {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  white-space: space-between;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  color: #fff;
+  background-color: #333;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.lista-modos div:hover {
+  background-color: #28272c;
+  color: #c1c7db;
+}
+.lista-modos div span {
+  overflow: hidden; /* Ocultar el contenido que desborda */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos cuando el texto desborda */
+}

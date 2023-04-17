@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf8">
+	<title>Emulador de Lavavajillas</title>
+	<script src="../electro.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<h1>Simulador de Lavavajillas (<span id="estado">Desconectado</span>)</h1>
+	<div id="simulador" class="row pdd desconectado">
+		<div id="sensors" class="rest">
+			<h2>Sensores</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Valor</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div id="parameters" class="rest">
+			<h2>Parámetros</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Valor</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div class="col middle rest">
+			<div id="electrodomestico">
+				<div id="pantalla" title="Pantalla"></div>
+				<div id="interior">
+					<div id="resistencia"></div>
+					<div id="motor"><div id="hor"></div><div id="ver"></div></div>
+				</div>
+				<a href="#" id="puertaAbierta" title="Abre / Cierra la puerta">
+					<div id="tirador"></div>
+				</a>
+				<div id="tomaAgua">←</div>
+				<div id="desague">→</div>
+			</div>
+		</div>
+
+		<div class="col middle rest">
+			<div id="presencia">
+				<div id="cabeza"></div>
+				<div id="cuerpo"></div>
+			</div>
+		</div>
+</body>
+
+</html>

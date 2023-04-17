@@ -1,0 +1,282 @@
+body,
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+
+}
+
+input {
+    width: 60px;
+}
+
+#simulador {
+    border: 1px solid #aaa;
+}
+
+#simulador.desconectado {
+    opacity: 0.25
+}
+
+#electrodomestico {
+    width: 300px;
+    height: 400px;
+    background-color: #aaa;
+    position: relative;
+}
+
+#electrodomestico>* {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#interior {
+    width: 200px;
+    height: 200px;
+    background-color: #444;
+    left: 50px;
+    top: 120px;
+    overflow: hidden;
+}
+
+#luz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #880;
+}
+
+#luz:not(.activo) {
+    background-color: #444;
+}
+
+#puertaAbierta {
+    display: block;
+    width: 200px;
+    height: 200px;
+    left: 50px;
+    top: 120px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 8px solid #ccc;
+}
+
+#puertaAbierta.activo {
+    transform: skewX(-20deg) translateX(37px) translateY(25px) scaleY(0.75);
+}
+
+#pantalla {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    top: 40px;
+    left: 120px;
+    background-color: #000;
+}
+
+#tirador {
+    position: absolute;
+    width: 100px;
+    height: 6px;
+    top: 24px;
+    left: calc(50% - 50px);
+    background-color: #444;
+}
+
+#resistencia {
+    position: absolute;
+    width: 90%;
+    height: 10px;
+    bottom: 10px;
+    left: 5%;
+    background-color: orange;
+}
+
+#tomaAgua {
+    background-color: #888;
+    height: 20px;
+    width: 60px;
+    right: -60px;
+    bottom: 60px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#tomaAgua.activo {
+    background-color: aqua;
+}
+
+#desague {
+    background-color: #888;
+    height: 20px;
+    width: 60px;
+    right: -60px;
+    bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#desague.activo {
+    background-color: bisque;
+}
+
+#motor {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+#hor {
+    position: absolute;
+    background-color: aquamarine;
+    top: 45px;
+    left: 0;
+    width: 100px;
+    height: 10px;
+}
+
+#ver {
+    position: absolute;
+    background-color: aquamarine;
+    left: 45px;
+    top: 0;
+    height: 100px;
+    width: 10px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#motor.activo {
+    animation: rotation 0.5s infinite linear;
+}
+
+#presencia {
+    width: 100px;
+    height: 300px;
+    position: relative;
+    margin: 16px;
+}
+
+#presencia>* {
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    background-color: #060;
+}
+
+#cabeza {
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 8px solid #fff;
+}
+
+#cuerpo {
+    top: 80px;
+    width: 100px;
+    height: 150px;
+    border-radius: 50px 50px 0 0;
+    border: 8px solid black;
+}
+
+#opciones>* {
+    width: 100px;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    border-radius: 4px;
+    padding: 100px 4px 4px 4px;
+    margin: 4px;
+    text-align: center;
+    background-color: #aaa;
+}
+
+#alarma {
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-size: 75%;
+    background-color: #aaa;
+    border-radius: 4px;
+    background-image: url("img/alarma.png");
+    background-repeat: no-repeat;
+    border: 8px solid transparent;
+    box-sizing: border-box;
+}
+
+#alarma.encendida {
+    background-color: #faa;
+    border-color: #800;
+}
+
+#izq>* {
+    margin: 32px 0;
+}
+
+.row,
+.col {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.pdd {
+    padding: 8px;
+}
+
+.rest {
+    flex: auto 1 1;
+}
+
+.col.middle {
+    justify-content: center;
+}
+
+table {
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+th {
+    background-color: #888;
+    padding: 8px;
+}
+
+td {
+    background-color: #ccc;
+    padding: 8px;
+}
+
+label {
+    display: block;
+}
+
+button {
+    margin: 8px;
+}
+
+.estado:not(.activo) {
+    filter: grayscale();
+}
